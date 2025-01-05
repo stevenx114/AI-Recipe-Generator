@@ -58,7 +58,7 @@ export default async function generateRecipe(ingredients: string[]) {
         const recipeTitle = recipeData?.title;
 
         if (!recipeTitle) {
-            throw new Error("Recipe title is required for imgae generation");
+            throw new Error("Recipe title is required for image generation");
         }
 
         const imagePrompt = `${recipeTitle}, professional food photography.`;

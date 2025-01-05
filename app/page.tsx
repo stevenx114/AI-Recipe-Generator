@@ -3,87 +3,73 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col p-24 md:px-24 lg:px-48">
-      <h1 className="text-5xl mt-10 mb-2">AI Recipe Generator</h1>
+    <main className="flex flex-col min-h-screen p-8 md:px-16 lg:px-32 text-gray-900">
+      <div className="flex items-center justify-between mt-8 mb-4">
+        <h1 className="text-4xl font-semibold">AI Recipe Generator</h1>
+        <div className="flex">
+          <Link
+            href="/create"
+            className="inline-block px-6 py-3 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-500"
+          >
+            Get Started
+          </Link>
+        </div>
+      </div>
 
-      <p className='text-2xl mb-10'>&ldquo;Cook with Confidence, Create with AI.&ldquo;</p>
+      <p className="text-lg text-gray-600 mb-8">
+        Elevate your culinary game with AI-powered recipe innovation.
+      </p>
 
-      <div className="w-full h-auto">
+      <div className="w-full rounded-lg overflow-hidden shadow-md">
         <Image
-        sizes="100vw"
-        width={1024}
-        height={1024}
-        style={{width: '100%', height: 'auto'}}
-        alt='recipe photo'
-        src='/jason-briscoe-GliaHAJ3_5A-unsplash.jpg'
+          sizes="100vw"
+          width={1024}
+          height={1024}
+          style={{ width: '100%', height: 'auto' }}
+          alt="Delicious recipe preview"
+          src="/jason-briscoe-GliaHAJ3_5A-unsplash.jpg"
         />
       </div>
 
-      <section id='hero_section' className="p-10 my-10">
-        <p className="text-5xl pb-5">
-        Discover Delicious Recipes with AI Magic Transform your ingredients
-        into gourmet meals with just a few clicks! Our app uses cutting-edge
-        AI technology to generate personalized recipes based on what you have
-        at home. Plus, enjoy stunning AI-generated images to inspire your
-        culinary creations.
+      <section id="hero_section" className="py-12">
+        <p className="text-xl leading-relaxed">
+          Unlock the potential of your pantry with our innovative AI-driven recipe generator. 
+          Transform your ingredients into gourmet creations with ease and precision, supported by 
+          stunning, AI-generated visuals to inspire your next dish.
         </p>
-
-        <Link href='/create' className="text-lg">
-          Get started
-        </Link>
-        <hr />
       </section>
 
-      <section id="how_it_works" className="text-2xl p-10 leading-loose">
-        <ul>
-          <h2>How it works</h2>
-          <li>
-            Input Your Ingredients: Simply enter the ingredients you have on
-            hand, and let our AI do the rest.
-          </li>
-          <li>
-            Generate a Recipe: Watch as our AI crafts a detailed, step-by-step
-            recipe tailored to your ingredients.
-          </li>
-          <li>
-            Visualize Your Dish: Get a mouth-watering, AI-generated image of
-            your dish to see what&apos;s cooking.
-          </li>
-          <li>
-            Cook & Enjoy: Follow the recipe and enjoy a delicious meal,
-            customized just for you!
-          </li>
+      <section id="how_it_works" className="py-12">
+        <h2 className="text-2xl font-medium mb-4">How It Works</h2>
+        <ul className="text-lg space-y-4 list-disc list-inside">
+          <li><strong>Enter Your Ingredients:</strong> List the items you have on hand and let our AI take care of the rest.</li>
+          <li><strong>Generate Custom Recipes:</strong> Receive step-by-step recipes tailored to your ingredients.</li>
+          <li><strong>Visual Inspiration:</strong> Enjoy realistic AI-generated visuals of your final dish.</li>
+          <li><strong>Cook & Savour:</strong> Follow the steps and indulge in a meal made just for you.</li>
         </ul>
       </section>
 
-      <section id="why_choose_us" className="text-2xl p-10 leading-loose">
-        <ul>
-          <h2>Why choose us?</h2>
-          <li>
-            AI-Powered Creativity: Harness the power of AI to unlock endless
-            culinary possibilities.
-          </li>
-          <li>
-            Beautiful Imagery: Our app not only generates recipes but also provides
-            stunning visuals to accompany them.
-          </li>
-          <li>
-            User-Friendly Experience: Simple and intuitive design, making it easy
-            for anyone to cook like a pro.
-          </li>
+      <section id="why_choose_us" className="py-12">
+        <h2 className="text-2xl font-medium mb-4">Why Choose Us?</h2>
+        <ul className="text-lg space-y-4 list-disc list-inside">
+          <li><strong>AI-Driven Innovation:</strong> Discover endless culinary possibilities powered by AI.</li>
+          <li><strong>Stunning Visuals:</strong> Get inspired with captivating, AI-crafted dish previews.</li>
+          <li><strong>Effortless Experience:</strong> Enjoy a seamless, user-friendly interface designed for all skill levels.</li>
         </ul>
       </section>
 
-      <section id='testimonials' className="text-2xl p-10 leading-loose">
-        <h2>Testimonials</h2>
-        <p>
-          &quot;This app has revolutionised my cooking! I never knew what to do with
-          my leftover ingredients until now.&quot; - Jamie, Home Chef
-        </p>
-        <p>
-          &quot;The AI-generated images are amazing! It's like having a
-          personal chef and food photographer in one.&quot; - Sarah, Food Enthusiast
-        </p>
+      <section id="testimonials" className="py-12">
+        <h2 className="text-2xl font-medium mb-4">What Our Users Say</h2>
+        <div className="space-y-6">
+          <blockquote className="text-lg text-gray-700">
+            "This app has transformed the way I cook! It turns my leftovers into gourmet meals." <br />
+            <span className="block mt-2 text-gray-500">- Jamie, Home Chef</span>
+          </blockquote>
+          <blockquote className="text-lg text-gray-700">
+            "The AI visuals are breathtaking! It's like having a personal chef and photographer in one." <br />
+            <span className="block mt-2 text-gray-500">- Sarah, Food Enthusiast</span>
+          </blockquote>
+        </div>
       </section>
     </main>
   );
