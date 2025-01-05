@@ -71,32 +71,6 @@ yarn dev
 
 The app will be accessible at [http://localhost:3000](http://localhost:3000).
 
-### 5. Build for Production (Optional)
-
-To create an optimised build for production:
-
-Using npm:
-```bash
-npm run build
-```
-
-Or using yarn:
-```bash
-yarn build
-```
-
-Then, start the production server:
-```bash
-npm start
-```
-
-### 6. Run Linting and Formatting (Optional)
-
-To ensure code quality:
-```bash
-npm run lint
-```
-
 ## File Structure
 
 ```plaintext
@@ -110,22 +84,3 @@ npm run lint
 ├── .env.local           // Environment variables
 ├── package.json         // Project configuration
 ```
-
-## Contributing
-
-Contributions are welcome! To contribute:
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add your feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Create a pull request
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-### Acknowledgements
-
-This project uses OpenAI's GPT models to power the recipe generation feature and integrates with Cloudinary for image management and MongoDB for database functionality.
