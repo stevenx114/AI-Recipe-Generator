@@ -16,6 +16,8 @@ To run this project locally, ensure you have the following installed:
 - [Node.js](https://nodejs.org/) (version 14.x or later)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 - A valid OpenAI API key (for the AI functionality)
+- A Cloudinary account (for image storage and management)
+- A MongoDB database (for storing recipes and user data)
 
 ## Getting Started
 
@@ -44,9 +46,14 @@ Create a `.env.local` file in the root directory and add the following:
 
 ```env
 OPENAI_API_KEY=your_openai_api_key
+CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_SECRET_KEY=your_cloudinary_secret_key
+MONGODB_URI=your_mongodb_uri
 NEXT_PUBLIC_API_URL=http://localhost:3000/api
 ```
-Replace `your_openai_api_key` with your actual OpenAI API key.
+
+Replace the placeholders (`your_openai_api_key`, `your_cloudinary_cloud_name`, etc.) with your actual keys, secrets, and URIs.
 
 ### 4. Run the Development Server
 
@@ -121,4 +128,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ### Acknowledgements
 
-This project uses OpenAI's GPT models to power the recipe generation feature.
+This project uses OpenAI's GPT models to power the recipe generation feature and integrates with Cloudinary for image management and MongoDB for database functionality.
