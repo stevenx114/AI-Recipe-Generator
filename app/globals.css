@@ -2,20 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@layer base {
+    article {
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    }
+
+    section {
+        @apply p-5
+    }
+
+    header h1 {
+        @apply text-3xl font-bold py-2
+    }
+
+    h2 {
+        @apply text-2xl font-bold py-2
+    }
+
+    ul li {
+        @apply list-disc
+    }
+    
+    ol li {
+        @apply list-decimal
+    }
+
+
 }
